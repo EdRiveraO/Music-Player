@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Player Ed</title>
+    <link rel="stylesheet" href="./vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./src/DOMGui.js"></script>
+    <script src="./src/MultimediaPlayer.js"></script>
+    <script src="./src/AudioPlayer.js"></script>
+    <script src="./src/Drop.js"></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="player" ondragover="myAudioReader.allowDrop(event)" ondrop="myAudioReader.drop(event)">
+       
+        <div id="main">
+          <div>
+            <div class="playback_controls">
+              <h2 id="title">Title</h2>
+              <h3 id="artist">Perigee</h3> <!--h3 id="album">Perigee</h3-->
+              <div class="time-holder">
+                <div class="slider">
+                  <div class="timecurrent">0:00</div>
+                  <div class="totaltime">0:00</div>
+                  <div class="fill"></div>
+                </div>
+              </div>
+              <div>
+              <i class="fa fa-bars menu"></i>
+              <div class="buttons">
+                <i class="fa fa-backward" id="back"></i>
+                <i class="fa fa-play loading" id="playpause"></i>
+                <i class="fa fa-forward" id="next"></i>
+                <i class="fas fa-retweet  fa-sm repeat" id="repeat" ></i>
+              </div>
+            </div>
+            </div>
+            <audio controls preload="none"></audio>
+          </div>
+        </div>
+        <ol id="playlist">
+          <li class="playing" onclick="myAudioPlayer.changePlayingSong(0);" > <h3 class="track"   href="./assets/songs/Tessa Violet - Bad Ideas.mp3"><span class="title">Bad Ideas</span> - <span class="artist">Tessa Violet</span><span class="background">https://images.genius.com/fbd16b5a08226d0a1a5a7199624064e5.1000x1000x1.jpg</span> </h3><span class="time">2:58</span> </li>
+          <li  onclick="myAudioPlayer.changePlayingSong(1);"><h3 class="track"  href="./assets/songs/Foster The People - S.H.C.mp3"><span class="title">S.H.C</span> - <span class="artist">Foster The People</span><span class="background">https://images-na.ssl-images-amazon.com/images/I/81s0KcZqtjL._SY355_.jpg</span></h3><span class="time">4:16</span> </li>
+          <li  onclick="myAudioPlayer.changePlayingSong(2);"><h3 class="track"  href="./assets/songs/MV Jack Stauber - Buttercup.mp3"><span class="title">Buttercup</span> - <span class="artist">Jack Stauber</span><span class="background">https://f4.bcbits.com/img/a1853711793_10.jpg</span></h3> <span class="time">3:28</span></li> 
+          <li  onclick="myAudioPlayer.changePlayingSong(3);"><h3 class="track"  href="./assets/songs/Sunset Lover.mp3"><span class="title">Sunset Lover</span> - <span class="artist">Petit Biscuit</span><span class="background">https://i.pinimg.com/originals/be/04/41/be044161d94a6368da28ad3f94a5a957.jpg</span></h3><span class="time">3:57</span> </li> 
+          <li  onclick="myAudioPlayer.changePlayingSong(4);"><h3 class="track"  href="./assets/songs/Imagine Dragons - Amsterdam.mp3"><span class="title">Amsterdam</span> - <span class="artist">Imagine Dragons</span>-<span class="background">https://images.genius.com/f505234629c96e699d905f231080ac6d.1000x1000x1.jpg</span></h3><span class="time">4:02</span> </li> 
+          <li  onclick="myAudioPlayer.changePlayingSong(5);"><h3 class="track"  href="./assets/songs/Calcutta - Orgasmo.mp3"><span class="title">Orgasmo</span> - <span class="artist">Calcutta</span><span class="background">https://lastfm-img2.akamaized.net/i/u/770x0/a63a1ca629485ecce3e692adc027b730.jpg</span></h3><span class="time">3:43</span> </li> 
+          <li  onclick="myAudioPlayer.changePlayingSong(6);"><h3 class="track"  href="./assets/songs/Imagine Dragons Nothing Left To Say.mp3"><span class="title">Nothing Left To Say</span> - <span class="artist">Imagine Dragons</span><span class="background">https://images.genius.com/f505234629c96e699d905f231080ac6d.1000x1000x1.jpg</span></h3> <span class="time">6:35</span></li> 
+        </ol>
+         
+      </div>
+     
+      <!--span>Based on: <a href="http://codepen.io/drewvosburg/pen/YyvwJY">This</a></span-->
+      <script src="src/main.js"></script>
+</body>
+</html>
